@@ -4,7 +4,7 @@ import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import api from '../../services/api';
 
-import './styles.css';
+import { TeacherArticle } from './styles.js';
 
 export interface Teacher {
     id: number;
@@ -28,7 +28,7 @@ const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
     }
 
     return (
-        <article className="teacher-item">
+        <TeacherArticle>
             <header>
                 <img src={teacher.avatar} alt={teacher.name} />
                 <div>
@@ -48,7 +48,7 @@ const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
                 Entrar em contato
             </a>
             </footer>
-        </article>
+        </TeacherArticle>
     )
 }
 
